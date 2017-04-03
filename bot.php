@@ -16,10 +16,7 @@ if (!is_null($events['events'])) {
 			if($event['message']['text'] == 'กินข้าวยัง') {
 				$text = "ยังไไม่ได้กิน";
 			}
-			if ($event['source']['userId'] == 'U8973e32c7e3db1f61fab2782447d3c4f') {
-				$text = "หยุดพูดเถอะ";
-				echo "usrหยุดพูดเถอะ";
-			}
+			
 			// $text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
