@@ -7,6 +7,8 @@ echo "aa";
 echo $content;
 // Parse JSON
 $events = json_decode($content, true);	// แปลงข้อมูลรูปแบบ row data ให้อยู่ในรูปแบบ array ของ php
+echo "bb";
+echo $events;
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
