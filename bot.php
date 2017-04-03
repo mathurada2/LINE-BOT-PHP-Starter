@@ -3,12 +3,8 @@ $access_token = 'FNa3VPoZVkcHeEOvrLUU5f+mlLXfcOR1TahFxN7KA1oYPiesjIjDmeYsOGvS0OJ
 
 // Get POST body content 
 $content = file_get_contents('php://input');    // อ่านไฟล์ออกมาเป็น string ด้วยฟังก์ชัน file_get_contents()
-echo "content";
-echo $content;
 // Parse JSON
 $events = json_decode($content, true);	// แปลงข้อมูลรูปแบบ row data ให้อยู่ในรูปแบบ array ของ php
-echo "event";
-echo $events;
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -20,7 +16,6 @@ if (!is_null($events['events'])) {
 			if($event['message']['text'] == 'กินข้าวยัง') {
 				$text = "ยังไไม่ได้กิน";
 			}
-			echo $event['source']['userId'];
 			if ($event['source']['userId'] == 'U8973e32c7e3db1f61fab2782447d3c4f') {
 				$text = "หยุดพูดเถอะ";
 				echo "usrหยุดพูดเถอะ";
