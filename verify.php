@@ -6,7 +6,6 @@ $access_token = 'FNa3VPoZVkcHeEOvrLUU5f+mlLXfcOR1TahFxN7KA1oYPiesjIjDmeYsOGvS0OJ
 $url = 'https://api.line.me/v1/oauth/verify';
 
 $headers = array('Authorization: Bearer ' . $access_token);
-echo $headers;
 // curl คือฟังก์ชันที่ถูกใส่เข้ามาใน php ตั้งแต่ PHP 4.0.2. 
 // เป็นฟังก์ชันสำหรับใช้ในการติดต่อสื่อสารกับ server โดยสามารถติดต่อได้หลากหลาย protocal เช่น http, https, ftp เป็นต้น
 
