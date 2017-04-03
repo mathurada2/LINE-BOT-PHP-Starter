@@ -3,9 +3,11 @@ $access_token = 'FNa3VPoZVkcHeEOvrLUU5f+mlLXfcOR1TahFxN7KA1oYPiesjIjDmeYsOGvS0OJ
 
 // Get POST body content 
 $content = file_get_contents('php://input');    // อ่านไฟล์ออกมาเป็น string ด้วยฟังก์ชัน file_get_contents()
+echo "content";
 echo $content;
 // Parse JSON
 $events = json_decode($content, true);	// แปลงข้อมูลรูปแบบ row data ให้อยู่ในรูปแบบ array ของ php
+echo "event";
 echo $events;
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
