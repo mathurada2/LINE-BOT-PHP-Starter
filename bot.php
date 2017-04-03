@@ -1,10 +1,10 @@
 <?php
 $access_token = 'FNa3VPoZVkcHeEOvrLUU5f+mlLXfcOR1TahFxN7KA1oYPiesjIjDmeYsOGvS0OJjkkFIi/gCgp+Q0iJ+L7cA9L884JLpeynm/PqwDOUC9EavTEHRX3oaYyXd1AtBelObWHeR6G1iJW/w+y3fKo9erAdB04t89/1O/w1cDnyilFU=';
 
-// Get POST body content
-$content = file_get_contents('php://input');
+// Get POST body content 
+$content = file_get_contents('php://input');    // อ่านไฟล์ออกมาเป็น string ด้วยฟังก์ชัน file_get_contents()
 // Parse JSON
-$events = json_decode($content, true);
+$events = json_decode($content, true);	// แปลงข้อมูลรูปแบบ row data ให้อยู่ในรูปแบบ array ของ php
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -28,7 +28,7 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
 			];
-			$post = json_encode($data);
+			$post = json_encode($data);    // แปลงค่าที่เราส่งให้ (argument) ให้ออกมาเป็น json
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
@@ -39,7 +39,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-
+			
 			echo $result . "\r\n";
 		}
 	}
