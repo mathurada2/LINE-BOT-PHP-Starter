@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/push';
 			//$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-				'to' = 'kikuanone.aor',
+				'to' => $replyToken,
 				'messages' => [$messages],
 			];
 			$post = json_encode($data);    // แปลงค่าที่เราส่งให้ (argument) ให้ออกมาเป็น json
