@@ -16,10 +16,11 @@ if (!is_null($events['events'])) {
 			if($event['message']['text'] == 'กินข้าวยัง') {
 				$text = "ยังไไม่ได้กิน";
 			}
-			if ($event['source']['userId'] == 'kikuanone.aor') {
-				$text = "หยุดพูดเถอะ";
-				echo "usrหยุดพูดเถอะ";
-			}
+			echo $event['source']['userId'];
+// 			if ($event['source']['userId'] == 'kikuanone.aor') {
+// 				$text = "หยุดพูดเถอะ";
+// 				echo "usrหยุดพูดเถอะ";
+// 			}
 			// $text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
