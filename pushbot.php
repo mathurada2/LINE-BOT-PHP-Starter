@@ -12,7 +12,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') { //  && $event['source']['userId'] == 'kikuanone.aor'
 			// Get text sent
-			$text = "";
+			$text = $event['message']['text'];
 			if($event['message']['text'] == 'กินข้าวยัง') {
 				$text = "ยังไไม่ได้กิน";
 			}
@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/push';
 			//$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-				'to' = 'kikuanone.aor',
+				'to' = 'U8973e32c7e3db1f61fab2782447d3c4f',
 				'messages' => [$messages],
 			];
 			$post = json_encode($data);    // แปลงค่าที่เราส่งให้ (argument) ให้ออกมาเป็น json
