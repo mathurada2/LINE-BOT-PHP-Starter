@@ -11,14 +11,15 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['source']['userId'] == 'kikuanone.aor') {
-			
+			// Get text sent
+			$text = "stop";
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => 'stop'
+				'text' => $text
 			];
 			
 			
