@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 			if($event['message']['text'] == 'กินข้าวยัง') {
 				$text = "ยังไไม่ได้กิน";
 			}
-			if ($event['source']['userId'] == 'kikuanne.aor') {
+			if ($event['source']['userId'] == 'kikuanone.aor') {
 				$text = "หยุดพูดเถอะ";
 			}
 			// $text = $event['message']['text'];
