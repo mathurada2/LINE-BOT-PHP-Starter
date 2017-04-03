@@ -36,7 +36,7 @@ if (!is_null($events['events'])) {
 			];
 			$post = json_encode($data);    // แปลงค่าที่เราส่งให้ (argument) ให้ออกมาเป็น json
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
+			echo ($post);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
