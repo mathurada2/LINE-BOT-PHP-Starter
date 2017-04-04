@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') { //  && $event['source']['userId'] == 'kikuanone.aor'
 			// Get text sent
-			$text = "";
+			$text = $event['message']['text'];
 			if($event['message']['text'] == 'กินข้าวยัง') {
 				$text = "ยังไไม่ได้กิน";
 			}
