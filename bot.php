@@ -18,7 +18,21 @@ if (!is_null($events['events'])) {
 			if($event['message']['text'] == 'กินข้าวยัง') {
 				$text = "ยังไม่ได้กิน";
 			}
-			
+						if($event['message']['text'] == 'สวัสดี') {
+				$text = "สุภาพจังเลย";
+			}
+						if($event['message']['text'] == 'มีแฟนยัง') {
+				$text = "ยังมั้งสวยขนาดนี้";
+			}
+						if($event['message']['text'] == 'ลาก่อน') {
+				$text = "แล้วเจอกันใหม่";
+			}
+						if($event['message']['text'] == 'กินข้าวยัง') {
+				$text = "ยังไม่ได้กิน";
+			}
+						if($event['message']['text'] == '1+1=?') {
+				$text = "2";
+			}
 			// $text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
