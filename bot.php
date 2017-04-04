@@ -3,12 +3,10 @@ $access_token = 'FNa3VPoZVkcHeEOvrLUU5f+mlLXfcOR1TahFxN7KA1oYPiesjIjDmeYsOGvS0OJ
 
 // Get POST body content 
 $content = file_get_contents('php://input');    // อ่านไฟล์ออกมาเป็น string ด้วยฟังก์ชัน file_get_contents()
-echo "aa";
-echo $content;
+;
 // Parse JSON
 $events = json_decode($content, true);	// แปลงข้อมูลรูปแบบ row data ให้อยู่ในรูปแบบ array ของ php
-echo "bb";
-echo $events;
+
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -32,8 +30,7 @@ if (!is_null($events['events'])) {
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
-			// $url = 'https://api.line.me/v2/bot/message/reply';
-			$url = 'https://api.line.me/v2/bot/message/push';
+			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
