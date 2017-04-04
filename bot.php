@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			if($event['message']['text'] == 'กินข้าวยัง') {
-				$text = "ยังไไม่ได้กิน";
+				$text = "ยังไม่ได้กิน";
 			}
 			
 			// $text = $event['message']['text'];
